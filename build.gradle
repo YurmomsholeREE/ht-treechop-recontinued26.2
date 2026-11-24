@@ -44,6 +44,8 @@ subprojects {
         }
         repositories {
             maven {
+                 name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
                 url = rootProject.file("publishing")
             }
         }
