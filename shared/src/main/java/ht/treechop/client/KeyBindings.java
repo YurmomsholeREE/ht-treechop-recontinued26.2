@@ -37,7 +37,7 @@ public class KeyBindings {
     }
 
     static InputConstants.Key getKey(int key) {
-        return InputConstants.Type.KEYBOARD.getOrCreate(key);
+        return InputConstants.Type.KEYSYS.getOrCreate(key);
     }
 
     public static class ActionableKeyBinding extends KeyMapping {
@@ -45,7 +45,7 @@ public class KeyBindings {
         private final Runnable callback;
 
         public ActionableKeyBinding(String resourceName, InputConstants.Key inputByCode, Runnable callback) {
-            super(resourceName, InputConstants.Type.KEYBOARD, inputByCode.getValue(), CATEGORY);
+            super(resourceName, InputConstants.Type.KEYSYS, inputByCode.getValue(), CATEGORY);
             this.callback = () -> {
                 Screen screen = Minecraft.getInstance().gui.screen();
                 if (screen == null || screen instanceof ClientSettingsScreen) {
