@@ -72,7 +72,7 @@ public abstract class ChoppedLogBlock extends BlockImitator implements IChoppabl
     public ChoppedLogBlock(BlockBehaviour.Properties properties) {
         super(properties
                 .dynamicShape()
-                .isViewBlocking((blockState, level, pos, box) -> false));
+                .isViewBlocking((blockState, level, pos,) -> false));
         this.registerDefaultState(
                 this.getStateDefinition().any()
                         .setValue(WATERLOGGED, Boolean.FALSE)
