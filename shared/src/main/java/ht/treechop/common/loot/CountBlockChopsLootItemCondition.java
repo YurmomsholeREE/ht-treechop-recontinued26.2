@@ -5,17 +5,17 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import ht.treechop.TreeChop;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.context.ContextKey;
-import net.minecraft.world.level.storage.loot.IntRangePredicate;
+import net.minecraft.world.level.storage.loot.IntRange;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 
 import java.util.Set;
 
-public record CountBlockChopsLootItemCondition(IntRangePredicate range) implements LootItemCondition {
+public record CountBlockChopsLootItemCondition(IntRange range) implements LootItemCondition {
     public static final Identifier ID = TreeChop.resource("count_block_chops");
     public static final MapCodec<CountBlockChopsLootItemCondition> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
-                            IntRangePredicate.CODEC.fieldOf("range").forGetter(CountBlockChopsLootItemCondition::range)
+                            IntRange.CODEC.fieldOf("range").forGetter(CountBlockChopsLootItemCondition::range)
                     )
                     .apply(instance, CountBlockChopsLootItemCondition::new)
     );
