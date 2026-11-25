@@ -6,7 +6,7 @@ import net.minecraft.core.component.BlockTransformer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.component.BlockTransformers;
+//import net.minecraft.world.item.component.BlockTransformers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
